@@ -7,6 +7,7 @@ import {
 } from "@remix-run/react";
 
 import "./tailwind.css";
+import Header from "./components/Header";
 
 export const links = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -23,14 +24,15 @@ export const links = () => [
 
 export function Layout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-stone-100">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-stone-100">
+        < Header />
         {children}
         <ScrollRestoration />
         <Scripts />
