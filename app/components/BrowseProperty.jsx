@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "@remix-run/react";
+import { Link, Form } from "@remix-run/react";
 
 export default function BrowseProperty() {
   const [selectedOption, setSelectedOption] = useState("Buy");
@@ -46,11 +46,19 @@ export default function BrowseProperty() {
       ))}
     </div>
 
-    <section className="flex space-x-12 p-4 bg-zinc-50 w-full rounded-full shadow-xl justify-around">
-      <div>
-        <h5 className="text-slate-400">Location</h5>
-        <p className="text-slate-800 font-semibold">{content[selectedOption].location}</p>
-      </div>
+    <Form  method="get" className="flex space-x-12 p-4 bg-zinc-50 w-full rounded-full shadow-xl justify-around">
+      <select name="" id="">
+        <option value="" className="text-slate-400">Location</option>
+        <optgroup label="Lagos Mainland" className="text-slate-800 font-semibold">
+          <option value="">Maryland</option>
+          <option value="">Ikeja</option>
+        </optgroup>
+        <optgroup label="Lagos Island">
+          <option value="">Ikoyi</option>
+          <option value="">Lekki</option>
+          <option value="">Victoria Island</option>
+        </optgroup>
+      </select>
       <div>
         <h5 className="text-slate-400">When</h5>
         <p className="text-slate-800 font-semibold">{content[selectedOption].when}</p>
@@ -58,7 +66,7 @@ export default function BrowseProperty() {
       <Link to={content[selectedOption].url} className="bg-slate-800 text-white py-2 px-3 border-solid border-2 rounded-md">
         Browse Properties
       </Link>
-    </section>
+    </Form>
   </div>
   );
 }
