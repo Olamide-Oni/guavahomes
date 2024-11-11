@@ -48,7 +48,7 @@ export default function BrowseProperty() {
 
     <section className="flex space-x-12 p-4 bg-zinc-50 w-full rounded-full shadow-xl justify-around">
       <div>
-        <h5 className="text-slate-400">Location</h5>
+        <h5 className="text-slate-400">Locationnn</h5>
         <p className="text-slate-800 font-semibold">{content[selectedOption].location}</p>
       </div>
       <div>
