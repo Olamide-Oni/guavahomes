@@ -1,46 +1,96 @@
-import { Link, NavLink } from "@remix-run/react"
-
+import { Link, NavLink } from "@remix-run/react";
+import { FaBars } from "react-icons/fa";
+import { IconContext } from "react-icons";
+import { useState } from "react";
 
 export default function Header() {
-    return (
-        <div className="header flex min-h-14 max-h-14 justify-between items-center mx-10" >
-            <div className="flex">
-             <img src="/guava-logo.JPG" alt="" className="max-h-14" />
-            </div>
-            <ul className=" grow-[0.5] flex justify-between">
-                <li>
-                    <NavLink className={({ isActive, isPending }) => isActive ? "active" : isPending ? "pending" : ""}
-                  to="">
-                        Rent
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink className={({ isActive, isPending }) => isActive ? "active" : isPending ? "pending" : ""}
-                                   to="">
-                        Buy
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink className={({ isActive, isPending }) => isActive ? "active" : isPending ? "pending" : ""}
-                                    to="">
-                        Sell
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink className={({ isActive, isPending }) => isActive ? "active" : isPending ? "pending" : ""}
-                                    to="">
-                        Manage Property
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink className={({ isActive, isPending }) => isActive ? "active" : isPending ? "pending" : ""}
-                                    to="">
-                        Resources
-                    </NavLink>
-                </li>
-            </ul>
-            <Link className="bg-slate-800 text-white px-2 py-0.5 border-solid border-2 rounded-full"> Contact Us</Link>
-        </div>
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    )
+    function onToggleMenu() {
+        setIsMenuOpen(prevState => !prevState);
+    }
+
+    return (
+        <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+            <nav className="flex justify-between items-center mx-auto h-16 px-4 md:px-8">
+                <div className="flex">
+                    <img src="/guava-logo.JPG" alt="" className="w-16" />
+                </div>
+
+                <div
+                    className={`absolute md:static bg-white md:min-h-fit left-0 w-full md:w-auto 
+                    ${isMenuOpen ? 'top-16' : 'top-[-100vh]'} 
+                    transition-all duration-300 ease-in-out
+                    shadow-md md:shadow-none
+                    z-40
+                    flex items-center px-5`}
+                >
+                    <ul className="flex flex-col md:flex-row md:items-center gap-8 md:gap-[4vw] py-8 md:py-0 w-full">
+                        <li>
+                            <NavLink
+                                className={({ isActive, isPending }) =>
+                                    isActive ? "active" : isPending ? "pending" : "hover:text-gray-500"
+                                }
+                                to=""
+                            >
+                                Rent
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                className={({ isActive, isPending }) =>
+                                    isActive ? "active" : isPending ? "pending" : "hover:text-gray-500"
+                                }
+                                to=""
+                            >
+                                Buy
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                className={({ isActive, isPending }) =>
+                                    isActive ? "active" : isPending ? "pending" : "hover:text-gray-500"
+                                }
+                                to=""
+                            >
+                                Sell
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                className={({ isActive, isPending }) =>
+                                    isActive ? "active" : isPending ? "pending" : "hover:text-gray-500"
+                                }
+                                to=""
+                            >
+                                Manage Property
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                className={({ isActive, isPending }) =>
+                                    isActive ? "active" : isPending ? "pending" : "hover:text-gray-500"
+                                }
+                                to=""
+                            >
+                                Resources
+                            </NavLink>
+                        </li>
+                    </ul>
+                </div>
+
+                <div className="flex items-center gap-4">
+                    <button className="bg-slate-800 text-white px-4 py-2 border-solid border-2 hover:bg-[#87acec] rounded-full text-sm">
+                        Contact Us
+                    </button>
+
+                    <div className="md:hidden">
+                        <IconContext.Provider value={{ size: "24" }}>
+                            <FaBars onClick={onToggleMenu} className="cursor-pointer" />
+                        </IconContext.Provider>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    );
 }
