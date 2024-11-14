@@ -31,7 +31,7 @@ export function Layout({ children }) {
         <Meta />
         <Links />
       </head>
-      <body className="bg-stone-100">
+      <body className="relative">
         < Header />
         {children}
         <ScrollRestoration />

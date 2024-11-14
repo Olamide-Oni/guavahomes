@@ -69,10 +69,10 @@ export default function LuxuryListings() {
     ));
 
     return (
-        <section className="luxurylistings my-12 w-full overflow-hidden">
-            <div className="listings-heading my-5 w-1/2 mx-auto">
-                <h2 className="text-5xl">Best Luxury Listings in Lagos</h2>
-                <h4>Some of the finest luxury listings in the market, handpicked just for you</h4>
+        <section className="my-9 w-full overflow-hidden md:my-12">
+            <div className="my-5 w-4/5 mx-auto md:w-4/5">
+                <h2 className=" text-2xl text-center md:text-4xl">Best Luxury Listings in Lagos</h2>
+                <h4 className="my-1 text-center text-xs md:text-xl">Some of the finest luxury listings in the market, handpicked just for you</h4>
             </div>
             <section className="listings mt-12">
                 <ul ref={scrollRef} className="flex gap-x-6 overflow-hidden">
