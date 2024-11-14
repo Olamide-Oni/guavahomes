@@ -23,7 +23,7 @@ export default function BrowseProperty() {
       </div>
 
 
-    <Form method="get" className="flex flex-col p-4 bg-zinc-50 w-full gap-y-4 rounded-[36px] outline outline-8 outline-orange-100 md:flex-row md:justify-around md:flex md:rounded-full md:space-x-4">
+    <Form method="get" className="flex flex-col p-4 bg-zinc-50 w-full gap-y-4 rounded-[36px] outline outline-8 outline-gray-400 md:flex-row md:justify-around md:flex md:rounded-full md:space-x-4">
       <div className="relative md:w-full">
         <select name="" id="" className="block w-full rounded-full border-slate-500 border px-3 py-3 pl-10 pr-8 text-slate-700 bg-white appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500">
           <option value="" className="text-slate-400 pr-6">Location</option>

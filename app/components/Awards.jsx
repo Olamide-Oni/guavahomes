@@ -12,8 +12,8 @@ export default function Awards() {
                 <div className="bg-[url('/layeAwards.jpg')] h-56 w-52" ></div>
             </div>
             <div className="listings-heading my-12 w-4/5 mx-auto flex justify-center items-center flex-col">
-                <h2 className="text-5xl my-2 text-slate-800">We Set the Records </h2>
-                <h4 className="text-center text-sm text-slate-600 leading-6">Our numbers back our words</h4>
+                <h2 className="text-xl my-2 text-slate-900 md:text-3xl">We Set the Records </h2>
+                <h4 className="text-sm text-slate-600 leading-6">Our numbers back our words</h4>
                 <div className="flex gap-x-6 mt-12">
                 <CountUpClients stopCount={1500} spanText="Happy Clients" />
                 <CountUpClients stopCount={300} spanText="Properties Sold" />
