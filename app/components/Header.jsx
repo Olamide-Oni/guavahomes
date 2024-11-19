@@ -31,7 +31,7 @@ export default function Header() {
                                 className={({ isActive, isPending }) =>
                                     isActive ? "active" : isPending ? "pending" : "hover:text-gray-500"
                                 }
-                                to=""
+                                to="/buy"
                             >
                                 Rent
                             </NavLink>
