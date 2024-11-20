@@ -3,11 +3,11 @@ import { Link, Form } from "@remix-run/react";
 
 export default function Footer() {
     return (
-        <section className='min-h-96 bg-green-700 px-28 py-20  text-slate-100 ' >
-            <div className='grid w-full grid-cols-3' >
+        <section className='min-h-96 bg-green-700 px-5 py-8  text-slate-100 md:px-28 md:py-20 ' >
+            <div className=' w-full flex flex-col gap-y-8 md:grid md:grid-cols-3' >
                 <div className='' >
                     <h3 className='mb-6 font-semibold'>Quick Links</h3>
-                    <div className='flex gap-x-14  '>
+                    <div className='flex flex-col gap-x-14 gap-y-9 md:flex-row  '>
                         <div className='flex flex-col gap-y-3'>
                             <Link>Awards</Link>
                             <Link>Careers - Join our Team</Link>
@@ -39,13 +39,9 @@ export default function Footer() {
                     </Form>
                     <div>
                         <h3>Follow Us</h3>
-
-                    </div>
-                    
+                    </div>  
                 </div>
-            
-            </div>
-           
+            </div>  
         </section>
     )
 }

@@ -15,8 +15,8 @@ export default function Awards() {
                 <h2 className="text-xl my-2 text-slate-900 md:text-3xl">We Set the Records </h2>
                 <h4 className="text-sm text-slate-600 leading-6">Our numbers back our words</h4>
                 <div className="flex gap-x-6 mt-12">
-                <CountUpClients stopCount={1500} spanText="Happy Clients" />
-                <CountUpClients stopCount={300} spanText="Properties Sold" />
+                <CountUpClients stopCount={500} spanText="Happy Clients" />
+                <CountUpClients stopCount={250} spanText="Properties Sold" />
                 </div>
             </div>
 
