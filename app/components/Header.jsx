@@ -14,7 +14,10 @@ export default function Header() {
         <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
             <nav className="flex justify-between items-center mx-auto h-16 px-4 md:px-8">
                 <div className="flex">
+                    <a href="/">
                     <img src="/guavalogo.png" alt="" className="w-16" />
+                    </a>
+                    
                 </div>
 
                 <div
@@ -26,27 +29,27 @@ export default function Header() {
                     flex items-center px-5`}
                 >
                     <ul className="flex flex-col md:flex-row md:items-center gap-8 md:gap-[4vw] py-8 md:py-0 w-full">
-                        <li>
+                        <li key="buy">
                             <NavLink
                                 className={({ isActive, isPending }) =>
                                     isActive ? "active" : isPending ? "pending" : "hover:text-gray-500"
                                 }
                                 to="/buy"
                             >
-                                Rent
+                                Buy
                             </NavLink>
                         </li>
-                        <li>
+                        <li key="rent">
                             <NavLink
                                 className={({ isActive, isPending }) =>
                                     isActive ? "active" : isPending ? "pending" : "hover:text-gray-500"
                                 }
                                 to=""
                             >
-                                Buy
+                                Rent
                             </NavLink>
                         </li>
-                        <li>
+                        {/*<li>
                             <NavLink
                                 className={({ isActive, isPending }) =>
                                     isActive ? "active" : isPending ? "pending" : "hover:text-gray-500"
@@ -55,8 +58,8 @@ export default function Header() {
                             >
                                 Sell
                             </NavLink>
-                        </li>
-                        <li>
+                        </li> */}
+                        <li key="manage-property">
                             <NavLink
                                 className={({ isActive, isPending }) =>
                                     isActive ? "active" : isPending ? "pending" : "hover:text-gray-500"
@@ -66,7 +69,7 @@ export default function Header() {
                                 Manage Property
                             </NavLink>
                         </li>
-                        <li>
+                        <li key="resources">
                             <NavLink
                                 className={({ isActive, isPending }) =>
                                     isActive ? "active" : isPending ? "pending" : "hover:text-gray-500"
