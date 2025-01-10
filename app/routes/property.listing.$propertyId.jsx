@@ -3,11 +3,16 @@ import { useLoaderData, Form } from "@remix-run/react";
 import { createClient } from '@supabase/supabase-js';
 import { useState, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import LatestProperties from "../components/LatestProperties";
+import { getLatestProperties } from "../utils/supabase.server";
 
 export const loader = async ({ request, params }) => {
   const headers = new Headers();
   const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY);
   const propertyId = params.propertyId;
+  const baseUrl = process.env.PUBLIC_STORAGE_URL; 
+
+  const latestProperties = await getLatestProperties(3);
   
   const { data: listingData, error: listingError } = await supabase
     .from('listings')
@@ -27,12 +32,14 @@ export const loader = async ({ request, params }) => {
 
   return json({ 
     listing: listingData, 
-    images 
+    images,
+    latestProperties,
+    baseUrl 
   }, { headers });
 };
 
 export default function PropertyListing() {
-  const { listing, images } = useLoaderData();
+  const { listing, images, base_url } = useLoaderData();
   const scrollContainerRef = useRef(null);
 
   if (!listing) {
@@ -51,7 +58,7 @@ export default function PropertyListing() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white">
       <div className="flex justify-between items-center w-full py-6">
         <h1 className="text-2xl font-bold text-gray-900">
           {listing.property_type}
@@ -145,6 +152,7 @@ export default function PropertyListing() {
                             <button type="submit" className='block border-[1px] border-slate-300 w-full my-5 py-3 pl-3 bg-green-800 text-white'>Find Property</button>
                         </Form>              
                 </section> 
+                < LatestProperties limit={3}  />
             </div>     
       </div>
 
