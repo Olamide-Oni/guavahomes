@@ -1,6 +1,7 @@
 import { json } from "@remix-run/node";
 import { useLoaderData, Form } from "@remix-run/react";
-import { createClient } from '@supabase/supabase-js';
+//import { createClient } from '@supabase/supabase-js';
+import { createServerClient, parseCookieHeader, serializeCookieHeader } from '@supabase/ssr';
 import { useState, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import LatestProperties from "../components/LatestProperties";
@@ -8,11 +9,22 @@ import { getLatestProperties } from "../utils/supabase.server";
 
 export const loader = async ({ request, params }) => {
   const headers = new Headers();
-  const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY);
+  const supabase = createServerClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY, {
+      cookies: {
+        getAll() {
+          return parseCookieHeader(request.headers.get('Cookie') ?? '')
+        },
+        setAll(cookiesToSet) {
+          cookiesToSet.forEach(({ name, value, options }) =>
+            headers.append('Set-Cookie', serializeCookieHeader(name, value, options))
+          )
+        },
+      },
+    });
   const propertyId = params.propertyId;
   const baseUrl = process.env.PUBLIC_STORAGE_URL; 
 
-  const latestProperties = await getLatestProperties(3);
+  const latestProperties = await getLatestProperties(supabase, 3);
   
   const { data: listingData, error: listingError } = await supabase
     .from('listings')
