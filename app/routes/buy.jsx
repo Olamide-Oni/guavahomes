@@ -1,13 +1,13 @@
 import { Outlet, useLoaderData, Form } from '@remix-run/react';
 import { json } from "@remix-run/node";
 import { createServerClient, parseCookieHeader, serializeCookieHeader } from '@supabase/ssr';
-import { createClient } from '@supabase/supabase-js'
+//import { createClient } from '@supabase/supabase-js'
 import BuyListings from '../components/BuyListings';
 
 export async function loader({ request }) {
   const headers = new Headers()
 
-  const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY, {
+  const supabase = createServerClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY, {
     cookies: {
       getAll() {
         return parseCookieHeader(request.headers.get('Cookie') ?? '')
