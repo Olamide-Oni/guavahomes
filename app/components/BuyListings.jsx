@@ -1,12 +1,10 @@
-import { Link, useLoaderData, useOutletContext } from '@remix-run/react';
+import { Link} from '@remix-run/react';
 
 const storageBaseUrl = process.env.PUBLIC_STORAGE_URL;
 
 
 export default function BuyListings({buyListings}) {
-   {/** const { buyListings } = useOutletContext(); */} 
-    const storageBase_url = useLoaderData();
-    
+   {/** const { buyListings } = useOutletContext(); */}   
     return (
         <section>
             {buyListings.length ? (

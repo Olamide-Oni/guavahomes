@@ -5,7 +5,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-
+import { json } from "@remix-run/node";
 import "./tailwind.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -25,7 +25,7 @@ export const links = () => [
   },
 ];
 
-export function Layout({ children }) {
+ /*export function Layout({ children }) {
   return (
     <html lang="en" className="bg-stone-100">
       <head>
@@ -36,7 +36,7 @@ export function Layout({ children }) {
       </head>
       <body className="bg-stone-100 text-slate-700">
         < Header />
-        <main className="pt-16"> {/* Adjust padding as needed */}
+        <main className="pt-16"> 
           {children}
         </main>
         <ScrollRestoration />
@@ -45,8 +45,27 @@ export function Layout({ children }) {
       </body>
     </html>
   );
-}
+}  */
 
 export default function App() {
-  return <Outlet />;
+  
+  return (
+    <html lang="en" className="bg-stone-100">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <Meta />
+        <Links />
+      </head>
+      <body className="bg-stone-100 text-slate-700">
+        <Header />
+        <main className="pt-16"> {/* Adjust padding as needed */}
+          <Outlet />
+        </main>
+        <ScrollRestoration />
+        <Scripts />
+        < Footer />
+      </body>
+    </html>
+  );
 }

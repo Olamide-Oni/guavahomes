@@ -30,15 +30,15 @@ export default function Header() {
                 >
                     <ul className="flex flex-col md:flex-row md:items-center gap-8 md:gap-[4vw] py-8 md:py-0 w-full">
                         <li key="buy">
-                            <NavLink
-                                className={({ isActive, isPending }) => {
-                                    console.log({ isActive, isPending });
-                                    return isActive ? "active" : isPending ? "pending" : "hover:text-gray-500";
-                                  }} 
+                           <Link
+                                className={({ isActive, isPending }) =>                                    
+                                     isActive ? "active" : isPending ? "pending" : "hover:text-gray-500"
+                                  } 
                                 to="/buy"
                             >
                                 Buy
-                            </NavLink>
+                            </Link>  
+                          
                         </li>
                         <li key="rent">
                             <NavLink
@@ -50,16 +50,6 @@ export default function Header() {
                                 Rent
                             </NavLink>
                         </li>
-                        {/*<li>
-                            <NavLink
-                                className={({ isActive, isPending }) =>
-                                    isActive ? "active" : isPending ? "pending" : "hover:text-gray-500"
-                                }
-                                to=""
-                            >
-                                Sell
-                            </NavLink>
-                        </li> */}
                         <li key="manage-property">
                             <NavLink
                                 className={({ isActive, isPending }) =>
@@ -75,7 +65,7 @@ export default function Header() {
                                 className={({ isActive, isPending }) =>
                                     isActive ? "active" : isPending ? "pending" : "hover:text-gray-500"
                                 }
-                                to="resources"
+                                to="/buy"
                             >
                                 Resources
                             </NavLink>

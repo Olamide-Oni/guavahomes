@@ -1,10 +1,11 @@
 import { useLoaderData, Form } from '@remix-run/react';
 import { json } from "@remix-run/node";
 import { createServerClient, parseCookieHeader, serializeCookieHeader } from '@supabase/ssr';
+//import { createClient } from '@supabase/supabase-js'
 import BuyListings from '../components/BuyListings';
 
 export async function loader({ request }) {
-  const headers = new Headers();
+  const headers = new Headers()
 
   const supabase = createServerClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY, {
     cookies: {
@@ -13,14 +14,14 @@ export async function loader({ request }) {
       },
       setAll(cookiesToSet) {
         cookiesToSet.forEach(({ name, value, options }) =>
-          headers.append('Set-Cookie', serializeCookieHeader(name, value, options))                                               
+          headers.append('Set-Cookie', serializeCookieHeader(name, value, options))
         )
       },
     },
   });
-  
+
   const { data, error } = await supabase.from('listings').select().eq('buy', true);
-  
+
   if (error) {
     console.error("Supabase Error:", error);
     throw new Response("Failed to fetch data", { status: 500 });
