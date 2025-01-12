@@ -30,25 +30,10 @@ export default function Header() {
                 >
                     <ul className="flex flex-col md:flex-row md:items-center gap-8 md:gap-[4vw] py-8 md:py-0 w-full">
                         <li key="buy">
-                            <NavLink
-                                className={({ isActive, isPending }) => {
-                                    console.log({ isActive, isPending });
-                                    return isActive ? "active" : isPending ? "pending" : "hover:text-gray-500";
-                                  }} 
-                                to="/buy"
-                            >
-                                Buy
-                            </NavLink>
+                            <a href="/buy">Bu</a>
                         </li>
                         <li key="rent">
-                            <NavLink
-                                className={({ isActive, isPending }) =>
-                                    isActive ? "active" : isPending ? "pending" : "hover:text-gray-500"
-                                }
-                                to="/rent"
-                            >
-                                Rent
-                            </NavLink>
+                            <a href="/buy">Sell</a>
                         </li>
                         {/*<li>
                             <NavLink
@@ -61,24 +46,10 @@ export default function Header() {
                             </NavLink>
                         </li> */}
                         <li key="manage-property">
-                            <NavLink
-                                className={({ isActive, isPending }) =>
-                                    isActive ? "active" : isPending ? "pending" : "hover:text-gray-500"
-                                }
-                                to="manage_property"
-                            >
-                                Manage Property
-                            </NavLink>
+                          <a href="/manage">Manage</a>
                         </li>
                         <li key="resources">
-                            <NavLink
-                                className={({ isActive, isPending }) =>
-                                    isActive ? "active" : isPending ? "pending" : "hover:text-gray-500"
-                                }
-                                to="resources"
-                            >
-                                Resources
-                            </NavLink>
+                        <a href="/resources">Resources</a>                      
                         </li>
                     </ul>
                 </div>
