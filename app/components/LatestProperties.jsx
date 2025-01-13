@@ -1,9 +1,5 @@
 import { useLoaderData, Link} from "@remix-run/react";
-<<<<<<< HEAD
-=======
-
->>>>>>> db-branch
-
+ add
 export default function LatestProperties() {
   const { latestProperties, baseUrl } = useLoaderData();
 

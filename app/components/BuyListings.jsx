@@ -4,13 +4,9 @@ const storageBaseUrl = process.env.PUBLIC_STORAGE_URL;
 
 
 export default function BuyListings({buyListings}) {
-<<<<<<< HEAD
-   {/** const { buyListings } = useOutletContext(); */}   
-=======
    {/** const { buyListings } = useOutletContext(); */} 
   
     
->>>>>>> db-branch
     return (
         <section>
             {buyListings.length ? (
