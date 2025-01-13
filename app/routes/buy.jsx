@@ -3,6 +3,8 @@ import { json } from "@remix-run/node";
 import { createServerClient, parseCookieHeader, serializeCookieHeader } from '@supabase/ssr';
 //import { createClient } from '@supabase/supabase-js'
 import BuyListings from '../components/BuyListings';
+import LatestProperties from '../components/LatestProperties';
+import { getLatestProperties } from "../utils/supabase.server";
 
 export async function loader({ request }) {
   const headers = new Headers()
@@ -27,7 +29,14 @@ export async function loader({ request }) {
     throw new Response("Failed to fetch data", { status: 500 });
   }
     
-  return json({ buyListings: data }, { headers });
+  const latestProperties = await getLatestProperties(supabase, 3);
+  const baseUrl = process.env.PUBLIC_STORAGE_URL; 
+
+  return json({ 
+    buyListings: data,
+    latestProperties,
+    baseUrl
+   }, { headers });
 }
 export default function Buy() {
     const { buyListings } = useLoaderData(); 
@@ -62,7 +71,9 @@ export default function Buy() {
                                 <option value="apartment">Apartment</option>
                             </select>
                             <button type="submit" className='block border-[1px] border-slate-300 w-full my-5 py-3 pl-3'>Find Property</button>
-                        </Form>              
+                        </Form>  
+
+                        < LatestProperties limit={3} />            
                 </section> 
                <section>
                    {/** < Outlet context={{buyListings}} />  */}
