@@ -1,4 +1,4 @@
-import CountUpClients from "./CountUp";
+
 
 export default function Awards() {
     return (
@@ -11,15 +11,6 @@ export default function Awards() {
                 <div className="bg-[url('/layeAwards.jpg')] h-56 w-52" ></div>
                 <div className="bg-[url('/layeAwards.jpg')] h-56 w-52" ></div>
             </div>
-            <div className="listings-heading my-12 w-4/5 mx-auto flex justify-center items-center flex-col">
-                <h2 className="text-xl my-2 text-slate-900 md:text-3xl">We Set the Records </h2>
-                <h4 className="text-sm text-slate-600 leading-6">Our numbers back our words</h4>
-                <div className="flex gap-x-6 mt-12">
-                <CountUpClients stopCount={500} spanText="Happy Clients" />
-                <CountUpClients stopCount={250} spanText="Properties Sold" />
-                </div>
-            </div>
-
         </section>
     )
 }

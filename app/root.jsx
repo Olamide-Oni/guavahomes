@@ -6,6 +6,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import appStylesHref from "./app.css?url";
 import "./tailwind.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -21,6 +22,7 @@ export const links = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
+  { rel: "stylesheet", href: appStylesHref }
 ];
 
 export function Layout({ children }) {
@@ -34,7 +36,7 @@ export function Layout({ children }) {
       </head>
       <body className="bg-stone-100 text-slate-700">
         < Header />
-        <main className="pt-16"> {/* Adjust padding as needed */}
+        <main className="pt-11"> {/* Adjust padding as needed */}
           {children}
         </main>
         <ScrollRestoration />

@@ -1,0 +1,98 @@
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    line-height: 1.5;
+    color: #121212;
+  }
+
+  .hero-section {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: background-image ease-in-out;
+    overflow: hidden;
+    position: relative;
+    animation: zoomIn 6s infinite alternate;
+    transition-timing-function: ease-out;
+  }
+  
+ /* #intro-text-section {
+    width: 12rem;
+  }
+  
+  #intro-text {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    color: antiquewhite;
+  }
+  
+  #intro-text > :first-child {
+    color: blue;
+    display: block;
+    width: 100%;
+  }
+  
+  #intro-text h2 {
+    font-size: 2rem;
+  } */
+  
+  @keyframes zoomIn {
+    0% {
+      background-size: 100% 100%;
+    }
+    100% {
+      background-size: 110% 110%;
+    }
+  }
+  
+  @keyframes changeText {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  #intro-text > * {
+    animation: changeText 6s infinite;
+  }
+  
+  #logo p {
+    color: blue;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
