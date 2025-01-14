@@ -5,12 +5,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-<<<<<<< HEAD
-import { json } from "@remix-run/node";
-=======
 
 import appStylesHref from "./app.css?url";
->>>>>>> db-branch
 import "./tailwind.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -42,11 +38,7 @@ export const links = () => [
       </head>
       <body className="bg-stone-100 text-slate-700">
         < Header />
-<<<<<<< HEAD
-        <main className="pt-16"> 
-=======
-        <main className="pt-11"> {/* Adjust padding as needed */}
->>>>>>> db-branch
+        <main className="pt-11"> 
           {children}
         </main>
         <ScrollRestoration />
