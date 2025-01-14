@@ -12,7 +12,7 @@ export default function Header() {
 
     return (
         <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-            <nav className="flex justify-between items-center mx-auto h-16 px-4 md:px-8">
+            <nav className="flex justify-between items-center mx-auto h-11 px-4 md:px-8">
                 <div className="flex">
                     <a href="/">
                     <img src="/guavalogo.png" alt="" className="w-16" />
@@ -45,9 +45,9 @@ export default function Header() {
                 </div>
 
                 <div className="flex items-center gap-4">
-                    <button className="bg-slate-800 text-white px-4 py-2 border-solid border-2 hover:bg-[#87acec] rounded-full text-sm">
+                    <Link to="/contact" className="bg-slate-800 text-white px-4 py-2 border-solid border-2 hover:bg-[#87acec] rounded-full text-sm">
                         Contact Us
-                    </button>
+                    </Link>
 
                     <div className="md:hidden">
                         <IconContext.Provider value={{ size: "24", color: "black" }}>

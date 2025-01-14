@@ -35,7 +35,7 @@ const CountUpClients = ({ stopCount, spanText }) => {
   }, [stopCount]);
 
   return (
-    <div ref={countRef} className="text-4xl font-bold md:flex flex-col">
+    <div ref={countRef} className="text-4xl font-bold md:flex flex-col text-slate-50">
       {count.toLocaleString()}+
       <span className="text-2xl"> {spanText}</span>
     </div>

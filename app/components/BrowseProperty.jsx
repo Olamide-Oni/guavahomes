@@ -164,7 +164,7 @@ export default function BrowseProperty() {
         </div>
 
         <Link className="bg-slate-800 text-white py-2 px-3 border-solid border-2 rounded-full text-center w-3/4 mx-auto sm:rounded-md md:w-full">
-          Browse Properties
+          Search Properties
         </Link>
       </Form>
     </div>
