@@ -61,7 +61,7 @@ export default function App() {
       </head>
       <body className="bg-stone-100 text-slate-700">
         <Header />
-        <main className="pt-16"> {/* Adjust padding as needed */}
+        <main className="pt-11"> {/* Adjust padding as needed */}
           <Outlet />
         </main>
         <ScrollRestoration />
