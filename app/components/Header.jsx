@@ -30,16 +30,19 @@ export default function Header() {
                 >
                     <ul className="flex flex-col md:flex-row md:items-center gap-8 md:gap-[4vw] py-8 md:py-0 w-full">
                         <li key="buy">
-                            <a href="/buy">Buy</a>
+                            <a href="/buy">Sales</a>
                         </li>
                         <li key="rent">
                             <a href="/rent">Rent</a>
                         </li>
                         <li key="manage-property">
-                          <a href="/manage">Manage</a>
+                          <a href="/manage">Lands</a>
+                        </li>
+                        <li key="manage-property">
+                          <a href="/manage">Property Management</a>
                         </li>
                         <li key="resources">
-                        <a href="/resources">Resources</a>                      
+                        <a href="/resources">Real Estate Brokerage</a>                      
                         </li>
                     </ul>
                 </div>

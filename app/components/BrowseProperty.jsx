@@ -96,7 +96,7 @@ export default function BrowseProperty() {
           }}
         >
           <div className="flex space-x-12 min-w-max px-4 mx-auto">
-            {["Buy", "Manage", "Rent", "Sell"].map(option => (
+            {["Buy", "Management", "Rent", "Sell"].map(option => (
               <button
                 key={option}
                 className={`cursor-pointer min-w-28 p-2 rounded-full bg-zinc-50 transition-colors duration-200 whitespace-nowrap ${

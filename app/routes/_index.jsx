@@ -30,14 +30,13 @@ export default function Index() {
     
   </section>
   */}
+  <AboutUs />
   <div className="browse-properties w-4/5 mt-12 mx-auto">
       <BrowseProperty />
   </div>
-
   <LuxuryListings />
   <IkoyiListings />
-  <TopRentals />
-  <AboutUs />
+  <TopRentals /> 
   < Awards />
 </div>
   )

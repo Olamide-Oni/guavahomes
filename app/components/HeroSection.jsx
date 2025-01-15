@@ -12,9 +12,16 @@ const HeroSection = () => {
 
   const headings = [
     'Buy, Manage, Rent or Sell',
-    "Let's Help You Find",
+    "Creating vibrant communities through sustainable",
     "Move Into",
   ];
+
+  const headingsBr = [
+    'Your Property With Ease',
+    'real estate and connection-focused development',
+    'Your Property With Ease'
+  ];
+
   const paragraphs = [
     'Discover a hassle-free way to buy, sell, or rent properties.',
     'Award-winning Construction Company and Real Estate Company',
@@ -24,13 +31,16 @@ const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
 
-  useEffect(() => {
+  
+
+   useEffect(() => {
     const imageInterval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 6000);
+    }, 10000); 
 
     return () => clearInterval(imageInterval);
   }, [images.length]);
+
 
   const handleChangeText = () => {
     setCurrentTextIndex((prevIndex) => (prevIndex + 1) % headings.length);
@@ -47,9 +57,9 @@ const HeroSection = () => {
         backgroundPosition: 'center',
       }}
     >
-      <div id="intro-text-section" >
-            <div id="intro-text" className="hero-text relative z-10 text-center">
-                <h1 id="text-heading" className="leading-7 text-3xl pt-5 font-semibold md:text-5xl md:mt-6 md:leading-[4rem] text-slate-50">{headings[currentImageIndex]}<br /> Your Property with Ease</h1>
+      <div id="intro-text-section pt-12 " >
+            <div id="intro-text" className="hero-text relative z-10 text-center pt-10">
+                <h1 id="text-heading" className="leading-7 text-3xl pt-5 font-semibold md:text-5xl md:mt-6 md:leading-[4rem] text-slate-50">{headings[currentImageIndex]}<br />{headingsBr[currentImageIndex]}</h1>
                 <p id="text-paragraph" className="my-2 text-slate-50">{paragraphs[currentImageIndex]}</p>
             </div>
       </div>
