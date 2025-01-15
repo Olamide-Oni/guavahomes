@@ -59,7 +59,7 @@ const HeroSection = () => {
     >
       <div id="intro-text-section pt-12 " >
             <div id="intro-text" className="hero-text relative z-10 text-center pt-10">
-                <h1 id="text-heading" className="leading-7 text-3xl pt-5 font-semibold md:text-5xl md:mt-6 md:leading-[4rem] text-slate-50">{headings[currentImageIndex]}<br />{headingsBr[currentImageIndex]}</h1>
+                <h1 id="text-heading" className=" leading-10 md:leading-10 text-2xl pt-5 font-semibold md:text-5xl md:mt-6 md:leading-[4rem] text-slate-50">{headings[currentImageIndex]}<br />{headingsBr[currentImageIndex]}</h1>
                 <p id="text-paragraph" className="my-2 text-slate-50">{paragraphs[currentImageIndex]}</p>
             </div>
       </div>
@@ -69,8 +69,8 @@ const HeroSection = () => {
                         <h2 className="text-xl my-2 text-slate-50 md:text-3xl">We Set the Records </h2>
                         <h4 className="text-sm text-slate-50 leading-6">Our numbers back our words</h4>
                         <div className="flex gap-x-6 mt-8">
-                        <CountUpClients stopCount={500} spanText="Happy Clients" />
-                        <CountUpClients stopCount={250} spanText="Properties Sold" />
+                        <CountUpClients stopCount={250} spanText="Happy Clients" />
+                        <CountUpClients stopCount={100} spanText="Properties Sold" />
                         </div>
               </div>
       </div>

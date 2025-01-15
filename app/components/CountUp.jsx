@@ -17,7 +17,7 @@ const CountUpClients = ({ stopCount, spanText }) => {
             }
             return prevCount + 10;
           });
-        }, 50);
+        }, 200);
 
         return () => clearInterval(startCounting);
       }
