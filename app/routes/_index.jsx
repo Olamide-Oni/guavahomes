@@ -30,7 +30,7 @@ export default function Index() {
     
   </section>
   */}
-  <div className="browse-properties w-4/5 mt-12">
+  <div className="browse-properties w-4/5 mt-12 mx-auto">
       <BrowseProperty />
   </div>
 

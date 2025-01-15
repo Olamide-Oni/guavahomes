@@ -49,16 +49,16 @@ const HeroSection = () => {
     >
       <div id="intro-text-section">
             <div id="intro-text" className="hero-text relative z-10 text-center">
-                <h1 id="text-heading" className="leading-7 text-3xl pt-5 font-semibold md:text-5xl md:my-4 md:leading-[4rem] text-slate-50">{headings[currentImageIndex]}<br /> Your Property with Ease</h1>
-                <p id="text-paragraph" className="my-6 text-slate-50">{paragraphs[currentImageIndex]}</p>
+                <h1 id="text-heading" className="leading-7 text-3xl pt-5 font-semibold md:text-5xl md:mt-6 md:leading-[4rem] text-slate-50">{headings[currentImageIndex]}<br /> Your Property with Ease</h1>
+                <p id="text-paragraph" className="my-2 text-slate-50">{paragraphs[currentImageIndex]}</p>
             </div>
       </div>
-      <div className="absolute top-1/3">
+      <div className="absolute top-[50%]">
             <div 
                 className="listings-heading my-12 w-4/5 mx-auto flex justify-center items-center flex-col">
                         <h2 className="text-xl my-2 text-slate-50 md:text-3xl">We Set the Records </h2>
                         <h4 className="text-sm text-slate-50 leading-6">Our numbers back our words</h4>
-                        <div className="flex gap-x-6 mt-12">
+                        <div className="flex gap-x-6 mt-8">
                         <CountUpClients stopCount={500} spanText="Happy Clients" />
                         <CountUpClients stopCount={250} spanText="Properties Sold" />
                         </div>
