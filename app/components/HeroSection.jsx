@@ -47,7 +47,7 @@ const HeroSection = () => {
         backgroundPosition: 'center',
       }}
     >
-      <div id="intro-text-section">
+      <div id="intro-text-section" >
             <div id="intro-text" className="hero-text relative z-10 text-center">
                 <h1 id="text-heading" className="leading-7 text-3xl pt-5 font-semibold md:text-5xl md:mt-6 md:leading-[4rem] text-slate-50">{headings[currentImageIndex]}<br /> Your Property with Ease</h1>
                 <p id="text-paragraph" className="my-2 text-slate-50">{paragraphs[currentImageIndex]}</p>
