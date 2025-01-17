@@ -14,10 +14,8 @@ export default function Header() {
         <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
             <nav className="flex justify-between items-center mx-auto h-11 px-4 md:px-8">
                 <div className="flex">
-                    <a href="/" className="w-16 h-5">
-                
-                    
-                    <img src="/guavalogo.svg" alt="" className="w-16 h-5" />
+                    <a href="/" className="w-16 h-5">              
+                    <img src="/guavalogo.png" alt="" className="w-16 h-5" />
                     </a>
                     
                 </div>
