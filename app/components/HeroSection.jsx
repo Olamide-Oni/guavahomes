@@ -6,20 +6,20 @@ import CountUpClients from './CountUp';
 const HeroSection = () => {
   const images = [
     'highrise.jpg',
-    'luxurious-home-in-the-desert.jpg',
-    'unsplash_MnlhHVfb-TA.png',
+    'reii.jpg',
+    'bare2.jpg', 
   ];
 
   const headings = [
     'Buy, Manage, Rent or Sell',
     "Creating vibrant communities through sustainable",
-    "Move Into",
+    "Do You Have A Bare Land? ",
   ];
 
   const headingsBr = [
     'Your Property With Ease',
     'real estate and connection-focused development',
-    'Your Property With Ease'
+    "let's help you develop it"
   ];
 
   const paragraphs = [

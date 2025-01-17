@@ -17,7 +17,6 @@ export default function Footer() {
                         </div>
                         <div className='flex flex-col gap-y-3'>
                             <Link>FAQs</Link>
-                            <Link>Find an Agent</Link>
                             <Link>Our Blogs</Link>
                             <Link>Media</Link>
                             <Link>List with us</Link>

@@ -14,8 +14,10 @@ export default function Header() {
         <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
             <nav className="flex justify-between items-center mx-auto h-11 px-4 md:px-8">
                 <div className="flex">
-                    <a href="/">
-                    <img src="/guavalogo.png" alt="" className="w-16" />
+                    <a href="/" className="w-16 h-5">
+                
+                    
+                    <img src="/guavalogo.svg" alt="" className="w-16 h-5" />
                     </a>
                     
                 </div>
@@ -30,19 +32,19 @@ export default function Header() {
                 >
                     <ul className="flex flex-col md:flex-row md:items-center gap-8 md:gap-[4vw] py-8 md:py-0 w-full">
                         <li key="buy">
-                            <a href="/buy">Sales</a>
+                            <a href="/buy">Property Development</a>
                         </li>
                         <li key="rent">
-                            <a href="/rent">Rent</a>
-                        </li>
-                        <li key="manage-property">
-                          <a href="/manage">Lands</a>
+                            <a href="/buy">Property Sales</a>
                         </li>
                         <li key="manage-property">
                           <a href="/manage">Property Management</a>
                         </li>
+                        <li key="manage-property">
+                          <a href="/manage">Real Estate Brokerage</a>
+                        </li>
                         <li key="resources">
-                        <a href="/resources">Real Estate Brokerage</a>                      
+                        <a href="/resources">Land Sells</a>                      
                         </li>
                     </ul>
                 </div>
