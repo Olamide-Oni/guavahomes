@@ -3,7 +3,7 @@ import { Link, Form } from "@remix-run/react";
 
 export default function Footer() {
     return (
-        <section className='min-h-96 bg-green-700 px-5 py-8  text-slate-100 md:px-28 md:py-20 ' >
+        <section className='min-h-96 bg-[#042222] px-5 py-8  text-slate-100 md:px-28 md:py-20 ' >
             <div className=' w-full flex flex-col gap-y-8 md:grid md:grid-cols-3' >
                 <div className='' >
                     <h3 className='mb-6 font-semibold'>Quick Links</h3>

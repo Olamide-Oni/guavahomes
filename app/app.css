@@ -40,9 +40,9 @@ html {
     transition-timing-function: ease-in-out;
   }
 
-  #intro-text > * {
+   /* #intro-text > * {
     animation: changeText 12s infinite;
-  }
+  } */
   
 
   @keyframes zoomIn {
@@ -58,7 +58,7 @@ html {
     }
   }
   
-  @keyframes changeText {
+  /*@keyframes changeText {
     0% {
       opacity: 0.2;
     }
@@ -77,14 +77,7 @@ html {
     }
     100% {
       opacity: 0.8;
-    }
-  }
+    } 
+  } */
   
-
-  
-  #logo p {
-    color: blue;
-    font-size: 1rem;
-    font-weight: bold;
-  }
   
