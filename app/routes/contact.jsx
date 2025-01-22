@@ -44,13 +44,15 @@ export default function Contact() {
 
                 </div>
 
-                <Form method="post" className="p-6 flex flex-col gap-y-8" >
+                <Form method="post" className="p-6 flex flex-col gap-y-8 bg-white" >
                     <h2>We want to hear from you!</h2>
-                    <div>
-                        <input type="text" name="" id="" />
-                        <input type="email" name="" id="" />
-                        <input type="text" name="" id="" />
-                        <textarea name="" id=""></textarea>
+                    <div className="flex flex-col gap-y-6">
+                        <div className="flex gap-x-4">
+                            <input type="text" name="" id="" className="w-3/5 shadow-xl rounded-md" placeholder="Your Name" />
+                            <input type="email" name="" id="" className="w-3/5 shadow-xl rounded-md" placeholder="Email Address" />
+                        </div>
+                        <input type="text" name="" id="" className="w-full shadow-xl rounded-md" placeholder="Subject"/>
+                        <textarea name="" id="" className="w-full shadow-xl rounded-md" placeholder="Your Message"></textarea>
                     </div>                   
                     <input type="submit" value="Send Message" className="bg-red-800 w-min p-2 place-self-end text-white " />
 

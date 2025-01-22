@@ -36,7 +36,7 @@ html {
     transition: background-image ease-in-out;
     overflow: hidden;
     position: relative;
-    animation: zoomIn 10s infinite alternate;
+    animation: zoomIn 15s infinite alternate;
     transition-timing-function: ease-in-out;
   }
 
@@ -49,35 +49,10 @@ html {
     0% {
       background-size: 100% 100%;
     }
-    50% {
-      background-size: 110% 110%;
-
-    }
     100% {
-      background-size: 120% 120%;
+      background-size: 110% 110%;
     }
   }
   
-  /*@keyframes changeText {
-    0% {
-      opacity: 0.2;
-    }
-    20% {
-      opacity: 0.4;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    60% {
-      opacity: 0.8;
-    }
-
-    80% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0.8;
-    } 
-  } */
   
   

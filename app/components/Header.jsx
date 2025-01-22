@@ -52,7 +52,7 @@ export default function Header() {
                         Contact Us
                     </Link>
 
-                    <div className="md:hidden">
+                    <div className="sm:hidden">
                         <IconContext.Provider value={{ size: "24", color: "black" }}>
                             <FaBars onClick={onToggleMenu} className="cursor-pointer" />
                         </IconContext.Provider>

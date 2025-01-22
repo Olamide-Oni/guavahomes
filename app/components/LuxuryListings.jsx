@@ -40,7 +40,7 @@ export default function LuxuryListings() {
     const listings = luxurylistings.map((listing, index) => (
         <li 
             key={index}
-            className="flex-none w-64 whitespace-normal"
+            className="flex-none w-64 whitespace-normal shadow-lg"
             onMouseEnter={stopScroll}
             onMouseLeave={startScroll}
         >

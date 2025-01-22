@@ -3,13 +3,13 @@ import { Link } from "@remix-run/react";
 export default function AboutUs() {
     return (
         <section className=" mb-6  w-screen h-[35rem] md:h-[27rem] relative bg-[#042222]">
-            <div className="bg-white  rounded-lg border-2 mt-1 w-4/5 absolute top-8 left-11 p-10  md:w-2/5 md:top-11 md:left-24 ">
+            <div className="bg-white  rounded-lg border-2 mt-1 w-4/5 absolute top-8 left-11 p-10  md:w-2/5 md:top-11 md:left-24  ">
                 <h2 className="text-xl my-2 text-slate-900 md:text-3xl" >About US</h2>
                 <p className="text-sm text-slate-600 leading-6" > Guava Homes is a premier residential real estate subsidiary of Guava Holdings, dedicated to delivering exceptional housing solutions that blend modern design with sustainable living.</p>
                 <br />
                 <p className="text-sm text-slate-600 leading-6" >With a focus on enhancing the quality of life for homeowners, Guava Home specializes in the develpment, construction, and management of innovative residential communities across key locations.</p>
                 <br />
-                <Link className="py-4 px-10 bg-slate-700 hover:bg-amber-300 text-gray-100 rounded-md mt-20" >Read More</Link>
+                <Link className="py-4 px-10 bg-slate-700 hover:bg-amber-300 text-gray-100 rounded-md mt-20 shadow-xl" >Read More</Link>
 
             </div>
         </section>
