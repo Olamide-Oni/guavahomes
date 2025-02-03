@@ -29,12 +29,7 @@ export default function Contact() {
                         </div>
                         <div className="flex gap-x-3">
                             <CiLocationOn />
-                            <a href="https://wa.me/234704730009">Call: (234) 704 730 009</a>
-                        </div>
-                        <div className="flex gap-x-3">
-                            <CiLocationOn />
-                            <a href="https://wa.me/2349136000289">Call: (234) 913 600 0289</a>
-                            
+                            <a href="https://wa.me/234704730009">Call: (234) 913 493 0000</a>
                         </div>
                         
                     </div>

@@ -28,7 +28,7 @@ export default function Footer() {
                     <div className='flex flex-col gap-y-3'>
                         <p>info@guavahomes.com</p>
                         <p>Ladi Alakija Lekki phase 1</p>
-                        <p>+234 813 243 5626</p>
+                        <p>+234 913 493 0000</p>
                     </div>
                 </div>
                 <div className='flex flex-col gap-y-3'>
